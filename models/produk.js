@@ -11,6 +11,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Produk.belongTo(models.Admin)
+      Produk.belongsToMany(models.Order, {through: 'OrderItems'})
     }
   };
   Produk.init({

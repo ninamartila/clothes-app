@@ -11,16 +11,72 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Admin.hasMany(models.Produk)
     }
   };
   Admin.init({
-    firstName: DataTypes.STRING,
-    lastName: DataTypes.STRING,
-    email: DataTypes.STRING,
-    phoneNumber: DataTypes.STRING,
-    alamat: DataTypes.TEXT,
-    username: DataTypes.STRING,
-    password: DataTypes.STRING
+    firstName: {
+      type: DataTypes.STRING,
+      validate: {
+        notEmpty:{
+          msg: 'first name cannot be empty'
+        }
+      }
+    },
+    lastName: {
+      type: DataTypes.STRING,
+      validate: {
+        notEmpty:{
+          msg: 'last name cannot be empty'
+        }
+      }
+    },
+    email: {
+      type: DataTypes.STRING,
+      validate: {
+        notEmpty:{
+          msg: 'email cannot be empty'
+        },
+        isEmail: {
+          msg: 'please enter the right email'
+        }
+      }
+    },
+    phoneNumber: {
+      type: DataTypes.STRING,
+      validate: {
+        notEmpty:{
+          msg: 'phone number cannot be empty'
+        }
+      }
+    },
+    alamat: {
+      type: DataTypes.TEXT,
+      validate: {
+        notEmpty:{
+          msg: 'phone number cannot be empty'
+        },
+        isUrl:{
+          msg: 'Please enter the right url'
+        }
+      }
+    },
+    username: {
+      type: DataTypes.STRING,
+      validate: {
+        notEmpty:{
+          msg: 'phone number cannot be empty'
+        }
+      }
+    },
+    password: {
+      type: DataTypes.STRING,
+      validate: {
+        notEmpty: {
+          msg: 'password cannot be empty'
+        }
+      }
+    }
   }, {
     sequelize,
     modelName: 'Admin',
