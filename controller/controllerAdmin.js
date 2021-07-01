@@ -1,7 +1,7 @@
 const { Produk } = require('../models')
 
 class ControllerAdmin {
-    static getProduk(req, res) {
+    static getProdukAdmin(req, res) {
         Produk.findAll()
             .then(data => {
                 console.log('ini', data);
@@ -13,11 +13,11 @@ class ControllerAdmin {
             })
     }
 
-    static getAddProduk(req, res) {
+    static getAddProdukAdmin(req, res) {
         res.render('addProdukAdmin')
     }
 
-    static postAddProduk(req, res) {
+    static postAddProdukAdmin(req, res) {
         const newData = {
             images: req.body.images,
             namaProduk: req.body.namaProduk,
@@ -34,12 +34,59 @@ class ControllerAdmin {
             })
     }
 
-    static getEditProduk(req, res) {
+    static getEditProdukAdmin(req, res) {
+        const dataId = req.params.id
 
+        Produk.findOne({
+            where: {
+                id: dataId
+            }
+        })
+            .then(data => {
+                res.render('editProdukAdmin', { data })
+            })
+            .catch(err => {
+                res.send(err)
+            })
     }
 
-    static postEditProduk(req, res) {
+    static postEditProdukAdmin(req, res) {
+        const dataId = req.params.id
+        const changeData = {
+            images: req.body.images,
+            namaProduk: req.body.namaProduk,
+            harga: req.body.harga,
+            stok: req.body.stok
+        }
+        console.log('ini data', changeData);
 
+        Produk.update(changeData, {
+            where: {
+                id: dataId
+            }
+        })
+            .then(() => {
+                res.redirect('/admins/produks')
+            })
+            .catch(err => {
+                res.send(err)
+            })
+    }
+
+    static getDeleteProdukAdmin(req, res) {
+        const dataId = req.params.id
+
+        Produk.destroy({
+            where: {
+                id: dataId
+            }
+        })
+            .then(() => {
+                res.redirect('/admins/produks')
+            })
+            .catch(err => {
+                res.send(err)
+            })
     }
 }
 
