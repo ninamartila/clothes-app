@@ -11,14 +11,14 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Costumer.hasMany(models.Order)
+      Customer.hasMany(models.Order)
     }
   };
   Customer.init({
     firstName: {
       type: DataTypes.STRING,
       validate: {
-        notEmpty:{
+        notEmpty: {
           msg: 'first name cannot be empty'
         }
       }
@@ -26,7 +26,7 @@ module.exports = (sequelize, DataTypes) => {
     lastName: {
       type: DataTypes.STRING,
       validate: {
-        notEmpty:{
+        notEmpty: {
           msg: 'last name cannot be empty'
         }
       }
@@ -34,7 +34,7 @@ module.exports = (sequelize, DataTypes) => {
     email: {
       type: DataTypes.STRING,
       validate: {
-        notEmpty:{
+        notEmpty: {
           msg: 'email cannot be empty'
         },
         isEmail: {
@@ -45,7 +45,7 @@ module.exports = (sequelize, DataTypes) => {
     phoneNumber: {
       type: DataTypes.STRING,
       validate: {
-        notEmpty:{
+        notEmpty: {
           msg: 'phone number cannot be empty'
         }
       }
@@ -53,10 +53,10 @@ module.exports = (sequelize, DataTypes) => {
     alamat: {
       type: DataTypes.TEXT,
       validate: {
-        notEmpty:{
+        notEmpty: {
           msg: 'phone number cannot be empty'
         },
-        isUrl:{
+        isUrl: {
           msg: 'Please enter the right url'
         }
       }
@@ -64,7 +64,7 @@ module.exports = (sequelize, DataTypes) => {
     username: {
       type: DataTypes.STRING,
       validate: {
-        notEmpty:{
+        notEmpty: {
           msg: 'phone number cannot be empty'
         }
       }

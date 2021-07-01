@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./layout/header.ejs', {title: 'Edit Produk' }); %>
+
+    <body style="padding: 20px;">
+        <h1>Add Produk</h1>
+        <form action="/admins/produks/add" method="POST">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Image</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" name='images'
+                    placeholder="Masukkan URL image">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Nama Produk</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" name='namaProduk'
+                    placeholder="Masukkan Nama Produk">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Harga Produk</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" name='harga'
+                    placeholder="Masukkan Harga Barang">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Stok Produk</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" name="stok"
+                    placeholder="Masukkan Stok Barang">
+            </div>
+            <input type="submit" class="btn btn-primary" value="Save">
+            <a class="btn btn-danger" href="/admins/produks">Cancel</a>
+        </form>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+    </body>
+
+</html>

@@ -1,0 +1,20 @@
+[
+    {
+        "firstName": "Nina",
+        "lastName": "Martila",
+        "email": "ninamartila@gmail.com",
+        "phoneNumber": "089759101066",
+        "alamat": "jl. srimahi dalam II, no 4b Bandung",
+        "username": "ninamartila",
+        "password": "password"
+    },
+    {
+        "firstName": "Hanna",
+        "lastName": "Tsania Tsuiba",
+        "email": "hannatsaniatsuiba@gmail.com",
+        "phoneNumber": "085782919290",
+        "alamat": "jl. Muhammad Toha Bandung",
+        "username": "hannatsania",
+        "password": "1234"
+    }
+]

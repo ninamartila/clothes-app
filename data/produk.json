@@ -1,0 +1,32 @@
+[
+    {
+        "namaProduk": "Baju Muslim 1",
+        "harga": 120000,
+        "images": "",
+        "stok": 20
+    },
+    {
+        "namaProduk": "Baju Muslim 2",
+        "harga": 200000,
+        "images": "",
+        "stok": 2
+    },
+    {
+        "namaProduk": "Baju Muslim 3",
+        "harga": 150000,
+        "images": "",
+        "stok": 50
+    },
+    {
+        "namaProduk": "Baju Muslim 4",
+        "harga": 220000,
+        "images": "",
+        "stok": 10
+    },
+    {
+        "namaProduk": "Baju Muslim 5",
+        "harga": 230000,
+        "images": "",
+        "stok": 5
+    }
+]

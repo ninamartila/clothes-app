@@ -1,0 +1,18 @@
+[
+    {
+        "firstName": "Rafi",
+        "lastName": "Pratama",
+        "email": "rafipratama@gmail.com",
+        "phoneNumber": "08923124142",
+        "username": "rafipratama",
+        "password": "3456"
+    },
+    {
+        "firstName": "Sinta",
+        "lastName": "Krismahani Setiawan",
+        "email": "sintakrismahanisetiawan@gmail.com",
+        "phoneNumber": "08884234352",
+        "username": "sintakrismahani",
+        "password": "2345"
+    }
+]
