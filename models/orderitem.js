@@ -14,10 +14,10 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   OrderItem.init({
-    OrderId: DataTypes.INTEGER,
     ProdukId: DataTypes.INTEGER,
-    jumlahProduk: DataTypes.INTEGER,
-    harga: DataTypes.INTEGER
+    OrderId: DataTypes.INTEGER,
+    totalBarang: DataTypes.INTEGER,
+    totalHarga: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'OrderItem',

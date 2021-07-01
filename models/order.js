@@ -11,15 +11,13 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Order.belongsTo(models.User)
-      Order.belongsToMany(models.Produk, { through: models.OrderItem })
     }
   };
   Order.init({
     kodeTransaksi: DataTypes.STRING,
     kurir: DataTypes.STRING,
-    nomorResi: DataTypes.STRING,
-    UserOrderId: DataTypes.INTEGER,
+    NomorResi: DataTypes.STRING,
+    status: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Order',
