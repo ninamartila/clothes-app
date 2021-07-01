@@ -4,6 +4,7 @@
         "lastName": "Pratama",
         "email": "rafipratama@gmail.com",
         "phoneNumber": "08923124142",
+        "alamat": "perumahan bharata pura",
         "username": "rafipratama",
         "password": "3456"
     },
@@ -12,6 +13,7 @@
         "lastName": "Krismahani Setiawan",
         "email": "sintakrismahanisetiawan@gmail.com",
         "phoneNumber": "08884234352",
+        "alamat": "perumahan sana sini",
         "username": "sintakrismahani",
         "password": "2345"
     }

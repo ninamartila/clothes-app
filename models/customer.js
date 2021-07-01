@@ -54,10 +54,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.TEXT,
       validate: {
         notEmpty: {
-          msg: 'phone number cannot be empty'
-        },
-        isUrl: {
-          msg: 'Please enter the right url'
+          msg: 'alamat cannot be empty'
         }
       }
     },

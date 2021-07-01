@@ -13,7 +13,6 @@ class ControllerCustomer {
 
     static getOrderCustomer(req, res) {
         const dataId = req.params.id
-
     }
 }
 
