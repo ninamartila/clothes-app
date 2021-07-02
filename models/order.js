@@ -12,41 +12,21 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       Order.belongsTo(models.Customer)
-      Order.belongsToMany(models.Produk, {through: 'OrderItems'})
+      Order.belongsToMany(models.Produk, { through: 'OrderItems' })
     }
   };
   Order.init({
     kodeTransaksi: {
-      type: DataTypes.STRING,
-      validate: {
-        notEmpty: {
-          msg: 'transaction code cannot be empty'
-        }
-      }
+      type: DataTypes.STRING
     },
     kurir: {
-      type: DataTypes.STRING,
-      validate: {
-        notEmpty: {
-          msg: 'kurir cannot be empty'
-        }
-      }
+      type: DataTypes.STRING
     },
     NomorResi: {
-      type: DataTypes.STRING,
-      validate: {
-        notEmpty: {
-          msg: 'Nomor resi cannot be empty'
-        }
-      }
+      type: DataTypes.STRING
     },
     status: {
-      type: DataTypes.STRING,
-      validate: {
-        notEmpty: {
-          msg: 'status cannot be empty'
-        }
-      }
+      type: DataTypes.STRING
     }
   }, {
     sequelize,

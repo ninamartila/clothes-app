@@ -50,14 +50,6 @@ module.exports = (sequelize, DataTypes) => {
         }
       }
     },
-    alamat: {
-      type: DataTypes.TEXT,
-      validate: {
-        notEmpty: {
-          msg: 'alamat cannot be empty'
-        }
-      }
-    },
     username: {
       type: DataTypes.STRING,
       validate: {

@@ -4,7 +4,6 @@ class ControllerAdmin {
     static getProdukAdmin(req, res) {
         Produk.findAll()
             .then(data => {
-                console.log('ini', data);
                 res.render('produkAdmin', { data })
             })
             .catch(err => {
@@ -58,7 +57,6 @@ class ControllerAdmin {
             harga: req.body.harga,
             stok: req.body.stok
         }
-        console.log('ini data', changeData);
 
         Produk.update(changeData, {
             where: {

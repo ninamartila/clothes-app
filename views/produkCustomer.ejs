@@ -2,7 +2,7 @@
 <html lang="en">
 <%- include('./layout/header.ejs', {title: 'Customer' }); %>
 <body style="padding: 20px;">
-    <%- include('./layout/navbar.ejs', {activeProduk: 'active' , activeAbout: '' }); %>
+    <%- include('./layout/navbar.ejs', {activeProduk: 'active' , activeAbout: '', activeKeranjang: '' }); %>
     <h1 style="padding-top: 50px;">List Produk Baju</h1>
     <% data.forEach((item) =>{ %>
         <div class="card" style="width: 250px; display: inline-block; margin-right: 20px; margin-top: 20px;">
@@ -11,7 +11,7 @@
                 <h5 class="card-title"><%= item.namaProduk%></h5>
                 <p class="card-text">Harga : <%= item.harga%></p>
                 <p class="card-text">Stok : <%= item.stok%></p>
-                <a href="/customers/keranjang/<%= item.id%>" class="btn btn-primary">Tambah Keranjang</a>
+                <a href="/customers/keranjang/<%= dataIdCustomer %>/<%= item.id%>" class="btn btn-primary">Tambah Keranjang</a>
             </div>
         </div>
     <% }) %>
